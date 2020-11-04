@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    let celsius, fahrenheit;
+
+    fahrenheit=prompt("Introduce temperatura en fahrenheit");
+
+    celsius=(5/9)*(fahrenheit-32);
+
+    console.log(celsius);
+    
+    if(celsius>=25){
+        console.log("Hace buen tiempo");
+    }else{
+        if(celsius<25 && celsius>=10){
+            console.log("Hace frio");
+        }else{
+            console.log("Hace mucho frio");
+        }
+    }
+    
+    document.write("el celsius son: "+celsius);
+    
+    if(celsius>=25){
+        document.write(" Hace buen tiempo");
+    }else{
+        if(celsius<25 && celsius>=10){
+            document.write(" Hace frio");
+        }else{
+            document.write(" Hace mucho frio");
+        }
+    }
+    
+    
+    </script>
+</body>
+</html>

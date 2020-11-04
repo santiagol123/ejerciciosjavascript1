@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+let a,b,c;
+a=parseInt(prompt("Introduce un número"));
+b=parseInt(prompt("Introduce otro número"));
+c=parseInt(prompt("Introduce otro número"));
+
+if(a>b){
+    if(a>c){
+        console.log(a,"Es el mayor número");
+    }else{
+    console.log(c,"Es el mayor número");
+    }
+}else if(b>c){
+    console.log(b,"Es el mayor número");
+}else{
+    console.log(c,"Es el mayor número");
+}
+
+if(a>b){
+    if(a>c){
+        document.write(a," Es el mayor número");
+    }else{
+        document.write(c," Es el mayor número");
+    }
+}else if(b>c){
+    document.write(b," Es el mayor número");
+}else{
+    document.write(c," Es el mayor número");
+}
+
+
+    </script>
+</body>
+</html>

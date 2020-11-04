@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    let edad, peso,altura, imc;
+
+    edad=parseInt(prompt("Introduce la edad"));
+    peso=prompt("Introduce el peso");
+    altura=prompt("Introduce altura en metros");
+    
+    imc=peso/(altura*altura);
+    console.log(imc);
+
+   if(edad<45){
+       if(imc<22){
+        console.log("RIESGO BAJO");
+       }else{
+           console.log("RIESGO MEDIO");
+       }
+      
+   }else{
+       if(imc<22){
+           console.log("RIESGO MEDIO");
+       }else{
+           console.log("RIESGO ALTO");
+       }
+   }
+
+   document.write("Tu IMC es de "+imc+" por tanto, ");
+
+   if(edad<45){
+       if(imc<22){
+        document.write("RIESGO BAJO");
+       }else{
+        document.write("RIESGO MEDIO");
+       }
+      
+   }else{
+       if(imc<22){
+        document.write("RIESGO MEDIO");
+       }else{
+        document.write("RIESGO ALTO");
+       }
+   }
+    
+    </script>
+</body>
+</html>

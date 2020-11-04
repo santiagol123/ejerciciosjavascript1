@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    let npreguntas, naciertos, nota, ejercicio;
+
+    npreguntas=prompt("Introduce el número de preguntas");
+
+    naciertos=prompt("Introduce el número de aciertos");
+
+    nota=parseInt(naciertos/npreguntas*100);
+
+    console.log(nota);
+    document.write(nota+"</br>");
+
+if(nota>=90){
+    console.log("CLASIFICACIÓN A");
+    document.write("CLASIFICACIÓN A");
+}else if(nota>=80){
+        console.log("CLASIFICACIÓN B");
+        document.write("CLASIFICACIÓN B");
+    }else if(nota>=70){
+            console.log("CLASIFICACIÓN C");
+            document.write("CLASIFICACIÓN C");
+        }else if(nota>=60){
+                console.log("CLASIFIACIÓN D");
+                document.write("CLASIFICACIÓN D");
+            }else if(nota>=0){
+                    console.log("CLASIFIACIÓN F");
+                    document.write("CLASIFICACIÓN A");
+                }
+        
+    </script>
+</body>
+</html>

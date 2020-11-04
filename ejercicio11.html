@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+     let ndia, nmes, nanho;
+
+ndia=prompt("Introduce el dia de nacimiento");
+
+nmes=prompt("Introduce el mes de nacimiento");
+
+nanho=prompt("Introduce el año de nacimiento");
+
+if((nanho%100!=0 && nanho%4==0) || (nanho%100==0 && nanho%400==0) && (ndia==29) && (nmes==2)){
+    console.log("La fecha es correcta");
+}else{
+    console.log("Fecha incorrecta");
+}
+
+if((nanho%100!=0 && nanho%4==0) || (nanho%100==0 && nanho%400==0) && (ndia==29) && (nmes==2)){
+    document.write("La fecha es correcta");
+}else{
+    document.write("Fecha incorrecta");
+}
+    </script>
+</body>
+</html>

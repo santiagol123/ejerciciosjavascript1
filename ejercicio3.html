@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script type="text/javascript">
+      let cateto1, cateto2,hipotenusa, resultado;
+
+      cateto1=parseInt(prompt("valor de cateto 1: "));
+      cateto2=parseInt(prompt("valor de cateto 2: "));
+
+      resultado=Math.sqrt((cateto1*cateto1)+(cateto2*cateto2));
+
+      console.log("La hipotenusa del triángulo con catetos ",cateto1,"y",cateto2, "es",resultado);
+
+      document.write("La hipotenusa es: "+resultado)
+
+   </script>
+</body>
+</html>

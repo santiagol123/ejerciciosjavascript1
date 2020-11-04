@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    let ndia, nmes, nanho, nsuerte;
+
+    let nsuerte2=0;
+
+    ndia=prompt("Introduce el dia de nacimiento");
+
+    nmes=prompt("Introduce el mes de nacimiento");
+
+    nanho=prompt("Introduce el año de nacimiento");
+
+    nsuerte=parseInt(ndia)+parseInt(nmes)+parseInt(nanho);
+
+    console.log(parseInt(nsuerte));
+
+    let numSuerteFinal=0
+
+    let numSuerteStr=nsuerte.toString()
+
+    for (i=0;i<numSuerteStr.length;i++)
+
+    numSuerteFinal+=parseInt(numSuerteStr[i])
+
+    console.log(numSuerteFinal)
+
+    </script>
+</body>
+</html>

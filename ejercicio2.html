@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script type="text/javascript">
+       let nlibros, npersonas, resultado, solucion, solucion2;
+
+       nlibros=parseInt(prompt("Introduce el número de libros "));
+       npersonas=parseInt(prompt("Introduce el numero de personas "));
+       resultado=`El numero de libros es: ${nlibros}, el número de personas es:  ${npersonas}`;
+
+       solucion=nlibros/npersonas;
+       solucion2=nlibros%npersonas;
+
+       console.log("Número de libros por persona: ",parseInt(solucion));
+       console.log("Número de libros de sobran: ",solucion2);
+       
+       document.write(resultado);
+   </script>
+</body>
+</html>
