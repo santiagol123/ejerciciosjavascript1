@@ -1,30 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-   <script type="text/javascript">
-    let arr = [];
-    let suma=0;
-    let multiplicacion=0;
-for (let i=0, t=20; i<20; i++) {
-       arr.push(Math.round(Math.random() * 10));
-}
-for(let i=0;i<=arr.length;i++){
-if(arr[i]%2==0){
-    suma=arr[i]+suma
-   
-}else{
-   multiplicacion=arr[i]*multiplicacion
-}
-}
-console.log(suma);
-console.log(multiplicacion);
-document.write(arr);
-document.write("<br>");
-</script> 
-</body>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // Identamos el código porque lo hace más legible
+      let arr = [];
+      let suma = 0;
+
+      // La multiplicacion siempre será cero si se inicializa a cero. Debería ser 1
+      let multiplicacion = 0;
+
+      // La variable t no tiene sentido
+      for (let i = 0, t = 20; i < 20; i++) {
+        arr.push(Math.round(Math.random() * 10));
+      }
+
+      /* Perfecto, pero es poco eficiente. Nos podríamos ahorrar hacer dos for
+         Durante el for anterior ya podríamos ir calculando la suma y el producto segun
+         se van generando los números aleatorios
+      */
+      for (let i = 0; i <= arr.length; i++) {
+        if (arr[i] % 2 == 0) {
+          suma = arr[i] + suma;
+        } else {
+          multiplicacion = arr[i] * multiplicacion;
+        }
+      }
+
+      /*
+         La información de salida debería ser significativa
+         
+            console.log(`La suma de los elementos del array ${arr} es ${suma}`);
+            console.log(`El producto de los elementos del array ${arr} es ${producto}`);
+      */
+      console.log(suma);
+      console.log(multiplicacion);
+      document.write(arr);
+      document.write("<br>");
+    </script>
+  </body>
 </html>

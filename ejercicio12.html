@@ -1,35 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script type="text/javascript">
-let arr = [];
-let suma=0;
-let media=0;
-for (let i=0, t=50; i<50; i++) {
-       arr.push(Math.round(Math.random() * 100))
-}
-function getMaxOfArray(arr) {
-  return Math.max.apply(null, arr)
-}
+      /*
+          Se realiza la declaracion al mismo tiempo que la usamos la variabble por primera vez.
+          Asi eliminamos lineas de codigo y lo hacemos mas claro
+        */
 
-function getMinOfArray(arr){
-    return Math.min.apply(null, arr)
-}
+      // Identamos el código porque lo hace más legible
+      let arr = [];
+      let suma = 0;
+      let media = 0;
 
-for (let i=0; i < arr.length; i++) {
-  suma =(suma + arr[i]);
-}
-media=suma/50;
+      // la variable t no tiene sentido
+      for (let i = 0, t = 50; i < 50; i++) {
+        arr.push(Math.round(Math.random() * 100));
+      }
 
-console.log(arr);
-console.log(getMaxOfArray(arr));
-console.log(getMinOfArray(arr));
-console.log(media);
+      /* Dudo mucho que entiendas lo que estas haciendo con estas dos funciones
+         Hacen lo correcto, pero puedes hacerlo con lo que sabes
+         Declaramos una variable que almacene el menor numero posible
+
+                let mayor=Number.NEGATIVE_INFINITY
+            
+         y ahora recorremos el array comparando cada elemento con mayor. Si el elemento del
+         array es mayor, entonces asignamos a mayor el elemento del array.
+
+         Con el menor hacemos algo parecido, pero esta vez asignamos a menor el amyor número
+         que conoce Javascript.
+
+         Esto lo podemos hacer dentro del bucle de generacion de los aleatorios por eficiencia
+
+      */
+      function getMaxOfArray(arr) {
+        return Math.max.apply(null, arr);
+      }
+
+      function getMinOfArray(arr) {
+        return Math.min.apply(null, arr);
+      }
+
+      // Perfecto el calculo de la suma y la media.
+      for (let i = 0; i < arr.length; i++) {
+        suma = suma + arr[i];
+      }
+      media = suma / 50;
+
+      /*
+         La información de salida debería ser significativa
+
+      console.log(`Los 50 elementos aleatorios del array son: ${arr}`);
+      console.log(`El mayor número en el array es ${mayor}`);
+      console.log(`El menor número en el array es ${menor}`);
+      console.log(`El valor medio de los elementos del array es ${media}`);
+
+      document.write(`<p>Los 50 elementos aleatorios del array son:<p>${arr}`);
+      document.write(`<p>El mayor número en el array es ${mayor}`);
+      document.write(`<p>El menor número en el array es ${menor}`);
+      document.write(`<p>El valor medio de los elementos del array es ${media}`);
+
+      */
+      console.log(arr);
+      console.log(getMaxOfArray(arr));
+      console.log(getMinOfArray(arr));
+      console.log(media);
     </script>
-</body>
+  </body>
 </html>

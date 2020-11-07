@@ -1,42 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script type="text/javascript">
-let a,b,c;
-a=parseInt(prompt("Introduce un número"));
-b=parseInt(prompt("Introduce otro número"));
-c=parseInt(prompt("Introduce otro número"));
+      /*
+          En Javascript no es obligatorio declarar las variables previamente,
+          por lo que podemos eliminar esta linea y realizar la declaracion
+          al mismo tiempo que la usamos.
+          Asi eliminamos lineas de codigo y lo hacemos mas claro
+        */
 
-if(a>b){
-    if(a>c){
-        console.log(a,"Es el mayor número");
-    }else{
-    console.log(c,"Es el mayor número");
-    }
-}else if(b>c){
-    console.log(b,"Es el mayor número");
-}else{
-    console.log(c,"Es el mayor número");
-}
+      // Identamos el código porque lo hace más legible
 
-if(a>b){
-    if(a>c){
-        document.write(a," Es el mayor número");
-    }else{
-        document.write(c," Es el mayor número");
-    }
-}else if(b>c){
-    document.write(b," Es el mayor número");
-}else{
-    document.write(c," Es el mayor número");
-}
+      ///let a, b, c;
+      let a = parseInt(prompt("Introduce un número"));
+      let b = parseInt(prompt("Introduce otro número"));
+      let c = parseInt(prompt("Introduce otro número"));
 
+      // La forma más sencilla
+      // let mayor=Math.max(a,b,c)
 
+      // Técnica habitual
+      let mayor = a;
+      if (b > mayor) mayor = b;
+      // Tendríamos que poner ahora
+      //    if (c>mayor) mayor=c
+      // pero talbien podemos poner la linea anterior de otra forma
+      mayor = c > mayor ? c : mayor;
+
+      // Imprimimos los resultados en la consola y el documento web con etiquetas html
+      console.log(`El mayor de ${a}, ${b} y ${c} es ${mayor}`);
+      document.write(`El mayor de 
+                        <ul>
+                           <li>${a}
+                           <li>${b}
+                           <li>${c}
+                        </ul>
+                        es ${mayor}`);
+      /*
+      if (a > b) {
+        if (a > c) {
+          console.log(a, "Es el mayor número");
+        } else {
+          console.log(c, "Es el mayor número");
+        }
+      } else if (b > c) {
+        console.log(b, "Es el mayor número");
+      } else {
+        console.log(c, "Es el mayor número");
+      }
+
+      if (a > b) {
+        if (a > c) {
+          document.write(a, " Es el mayor número");
+        } else {
+          document.write(c, " Es el mayor número");
+        }
+      } else if (b > c) {
+        document.write(b, " Es el mayor número");
+      } else {
+        document.write(c, " Es el mayor número");
+      }
+      */
     </script>
-</body>
+  </body>
 </html>

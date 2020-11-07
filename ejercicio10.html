@@ -1,43 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script type="text/javascript">
-    let celsius, fahrenheit;
+      /*
+          En Javascript no es obligatorio declarar las variables previamente,
+          por lo que podemos eliminar esta linea y realizar la declaracion
+          al mismo tiempo que la usamos.
+          Asi eliminamos lineas de codigo y lo hacemos mas claro
+        */
 
-    fahrenheit=prompt("Introduce temperatura en fahrenheit");
+      //     let celsius, fahrenheit;
 
-    celsius=(5/9)*(fahrenheit-32);
+      // Identamos el código porque lo hace más legible
 
-    console.log(celsius);
-    
-    if(celsius>=25){
+      let fahrenheit = prompt("Introduce temperatura en fahrenheit");
+
+      // Deberíamos quedarnos con dos decimales .toFixed(2)
+      let celsius = (5 / 9) * (fahrenheit - 32);
+
+      console.log(celsius);
+
+      /* No tiene sentido realizar dos veces lo mismo
+           Se puede evitar declarando una variable y asignado a esa variable
+           el mensaje. Ya solo queda sacar el mensaje de salida por consola
+           y en el documento empleando esa variable
+           Sobre uno de los ifs (son identicos bloques salvo por console.log o document.write)
+        */
+
+      if (celsius >= 25) {
         console.log("Hace buen tiempo");
-    }else{
-        if(celsius<25 && celsius>=10){
-            console.log("Hace frio");
-        }else{
-            console.log("Hace mucho frio");
+      } else {
+        if (celsius < 25 && celsius >= 10) {
+          console.log("Hace frio");
+        } else {
+          console.log("Hace mucho frio");
         }
-    }
-    
-    document.write("el celsius son: "+celsius);
-    
-    if(celsius>=25){
+      }
+
+      //document.write("el celsius son: " + celsius);
+
+      if (celsius >= 25) {
         document.write(" Hace buen tiempo");
-    }else{
-        if(celsius<25 && celsius>=10){
-            document.write(" Hace frio");
-        }else{
-            document.write(" Hace mucho frio");
+      } else {
+        if (celsius < 25 && celsius >= 10) {
+          document.write(" Hace frio");
+        } else {
+          document.write(" Hace mucho frio");
         }
-    }
-    
-    
+      }
+
+      /* Resultado significativo empleando la variable elTiempo que almacenaria
+        la cadena de salida como "Hace buen tiempo","Hace frio", "Hace mucho frio"
+     
+     console.log(`${fahrenheit} grados Celsius equivalen a ${celsius} grados Celsius`)    
+     console.log(elTiempo)
+     document.write(`<p>${fahrenheit} grados Celsius equivalen a ${celsius} grados Celsius`);
+     document.write(elTiempo)
+     */
     </script>
-</body>
+  </body>
 </html>

@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script type="text/javascript">
-    let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+      
+      // Identamos el código porque lo hace más legible
 
-let numero = prompt("Introduce tu número de DNI (sin la letra)");
+      let letras = ["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E","T",];
 
-if(numero < 0 || numero > 99999999) {
-  alert("El número proporcionado no es válido");
-}
-else {
-  let letraCalculada = letras[numero % 23];
-  document.write("La letra es "+letraCalculada);
-  console.log("La letra es "+letraCalculada);
-}
+      let numero = prompt("Introduce tu número de DNI (sin la letra)");
+      if (numero < 0 || numero > 99999999) {
+        alert("El número proporcionado no es válido");
+      } else {
+        let letraCalculada = letras[numero % 23];
+
+        /*
+           Los mensajes de salida deberían ser significativos
+
+           document.write(`Al DNI ${numero} le corresponde en el NIF la letra ${letraCalculada}`);
+           console.log(`Al DNI ${numero} le corresponde en el NIF la letra ${letraCalculada}`);
+
+        */
+        document.write("La letra es " + letraCalculada);
+        console.log("La letra es " + letraCalculada);
+      }
     </script>
-</body>
+  </body>
 </html>

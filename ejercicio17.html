@@ -1,37 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <script type="text/javascript">
-        function adivinaAleatorio(){
-          var  respuesta=prompt("Introduce un numero del 1 al 100");
-				var numeroAleatorio = Math.floor((Math.random()*(101-1))+1);
-				document.getElementById('resultado').innerHTML = 'Número aleatorio = ' + numeroAleatorio;
-				var contador = 1;
-				var respuesta = prompt('Introduzca un numero del 1 al 100');
-				while(Number(respuesta)!==numeroAleatorio && contador++){
-					if(respuesta<numeroAleatorio){
-						respuesta = prompt('El número es mayor que el introducido. Inténtelo de nuevo');
-					}else{
-						respuesta = prompt('El número es menor que el introducido. Inténtelo de nuevo');
-					}
-					contador++;
-					document.getElementById('contador').innerHTML = 'Intentos = ' + contador;
-				}
-				if(respuesta==numeroAleatorio){
-					alert('Enhorabuena. Ha acertado');
-				}
-			}
-          
+  </head>
+  <body>
+	<script type="text/javascript">
 
+	/*
+	   Esta bien buscar por Internet, pero si no entiendes el código HTML, CSS y el Javascript
+	   no te va a servir para nada
+	   Estas intentando manipular el DOM, cuando aun no hemos hablado de él
+
+       Puedes realizar el ejercicio sin más que prompt y alert
+
+	   Se trata de:
+	      * Generar un numero aleatorio
+		  * Realizar un bucle repetitivo para pedir un numero mientras no coincida con el numero
+		    aleatorio generado
+		  * Dentro del bucle anterior, podemos comparar los numeros y proporcionarle
+		    una ayuda al usuario para que sepa si tiene que introducir un numero mayor
+			o menor que el anterior
+		  * El bucle debe terminar cuando el usuario introduzca un numero que coincida con
+		    el numero aleatorio generado
+	*/
+
+	/*
+      function adivinaAleatorio() {
+        var respuesta = prompt("Introduce un numero del 1 al 100");
+        var numeroAleatorio = Math.floor(Math.random() * (101 - 1) + 1);
+        document.getElementById("resultado").innerHTML =
+          "Número aleatorio = " + numeroAleatorio;
+        var contador = 1;
+        var respuesta = prompt("Introduzca un numero del 1 al 100");
+        while (Number(respuesta) !== numeroAleatorio && contador++) {
+          if (respuesta < numeroAleatorio) {
+            respuesta = prompt(
+              "El número es mayor que el introducido. Inténtelo de nuevo"
+            );
+          } else {
+            respuesta = prompt(
+              "El número es menor que el introducido. Inténtelo de nuevo"
+            );
+          }
+          contador++;
+          document.getElementById("contador").innerHTML =
+            "Intentos = " + contador;
+        }
+        if (respuesta == numeroAleatorio) {
+          alert("Enhorabuena. Ha acertado");
+        }
+      }
     </script>
-    <div class="pulsador" onclick="adivinaAleatorio()">Comenzar Ejercicio 1</div>
+    <div class="pulsador" onclick="adivinaAleatorio()">
+      Comenzar Ejercicio 1
+    </div>
     <div class="pulsador" id="contador">00</div>
-    <div class="pulsador" id="resultado">00</div>
-
-</body>
+    <div class="pulsador" id="resultado">00</div>*/
+  </body>
 </html>

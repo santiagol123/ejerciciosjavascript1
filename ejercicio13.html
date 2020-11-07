@@ -1,64 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script type="text/javascript">
-let A=E=I=O=U=0;
-        letras = verFrase();
-        
-        function verFrase(){
-            let frase = window.prompt("escribe un texto cualquiera");
-            let textoRoto = frase;
-            return textoRoto;
-        }        
-        
-        for(k=0;k <letras.length;k++){
-            
-            switch(letras[k]){
-                case "A":
-                case "Á":
-                    A++;
-                    break;
-                case "E":
-                case "É":
-                    E++;
-                    break;
-                case "I":
-                case "Í":
-                    I++;
-                    break;
-                case "O":
-                case "Ó":
-                    O++;
-                    break;
-                case "U":
-                case "Ú":
-                    U++;
-                    break;
-           
-            }
-        }
-        
-        totalVocales = A+E+I+O+U;
-        
-        document.write("Hay " +  A + " vocales A<br>");
-        document.write("Hay " +  E + " vocales E<br>");
-        document.write("Hay " +  I + " vocales I<br>");
-        document.write("Hay " +  O + " vocales O<br>");
-        document.write("Hay " +  U + " vocales U<br>");
-        document.write("<br>");
-        document.write("Total vocales: " + totalVocales);
+      /*
+          En Javascript no es obligatorio declarar las variables previamente,
+          por lo que podemos eliminar esta linea y realizar la declaracion
+          al mismo tiempo que la usamos.
+          Asi eliminamos lineas de codigo y lo hacemos mas claro
+        */
 
-        console.log("Hay " +  A + " vocales A");
-        console.log("Hay " +  E + " vocales E");
-        console.log("Hay " +  I + " vocales I");
-        console.log("Hay " +  O + " vocales O");
-        console.log("Hay " +  U + " vocales U");
-        console.log("Total vocales: " + totalVocales);
+      // Identamos el código para hacerlo mas legible
+
+      /* 
+         La función lo más generica posible que cuenta cuantas
+         veces aparece la letra en cadena
+         El array nos permite cambiar las letras a buscar sin 
+         tener que revisar el resto del script
+
+      */
+
+        let letras=["A","E","I","O","U","Á","É","Í","Ó","Ú"]
+
+        // Leemos frase mientras no introducimos algo
+        let frase;
+        do {
+          frase = prompt("Escribe un texto cualquiera");
+        } while (frase == "")
+
+        // Cuenta el numero de veces que aparece letra en cadena 
+        // Hacemos la función lo más generica posible
+        function contar(cadena,letra) {
+            let contador=0
+            let indice=0;
+            while (indice<cadena.length&&cadena.indexOf(letra,indice)!=-1) {
+                contador++
+                indice=cadena.indexOf(letra,indice)+1
+            }
+            return contador
+        }
+
+        // Acumulamos el numero de veces que aparece una letra del array en
+        // la cadena
+        let nletras=0
+        for (let i=0;i<letras.length;i++)
+           nletras+=contar(frase,letras[i])
+        
+        document.write("Total vocales en mayúsculas: " + nletras);
+        console.log("Total vocales en mayúsculas: " + nletras);
+
+     /*
+      let A = (E = I = O = U = 0);
+      letras = verFrase();
+
+      function verFrase() {
+        let frase = window.prompt("escribe un texto cualquiera");
+        let textoRoto = frase;
+        return textoRoto;
+      }
+
+      for (k = 0; k < letras.length; k++) {
+        switch (letras[k]) {
+          case "A":
+          case "Á":
+            A++;
+            break;
+          case "E":
+          case "É":
+            E++;
+            break;
+          case "I":
+          case "Í":
+            I++;
+            break;
+          case "O":
+          case "Ó":
+            O++;
+            break;
+          case "U":
+          case "Ú":
+            U++;
+            break;
+        }
+      }
+
+      totalVocales = A + E + I + O + U;
+
+      document.write("Hay " + A + " vocales A<br>");
+      document.write("Hay " + E + " vocales E<br>");
+      document.write("Hay " + I + " vocales I<br>");
+      document.write("Hay " + O + " vocales O<br>");
+      document.write("Hay " + U + " vocales U<br>");
+      document.write("<br>");
+      document.write("Total vocales: " + totalVocales);
+
+      console.log("Hay " + A + " vocales A");
+      console.log("Hay " + E + " vocales E");
+      console.log("Hay " + I + " vocales I");
+      console.log("Hay " + O + " vocales O");
+      console.log("Hay " + U + " vocales U");
+      console.log("Total vocales: " + totalVocales);
+      */
     </script>
-</body>
+  </body>
 </html>

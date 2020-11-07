@@ -1,53 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script type="text/javascript">
-    let edad, peso,altura, imc;
+      /*
+          En Javascript no es obligatorio declarar las variables previamente,
+          por lo que podemos eliminar esta linea y realizar la declaracion
+          al mismo tiempo que la usamos.
+          Asi eliminamos lineas de codigo y lo hacemos mas claro
+        */
 
-    edad=parseInt(prompt("Introduce la edad"));
-    peso=prompt("Introduce el peso");
-    altura=prompt("Introduce altura en metros");
-    
-    imc=peso/(altura*altura);
-    console.log(imc);
+      // let edad, peso, altura, imc;
 
-   if(edad<45){
-       if(imc<22){
-        console.log("RIESGO BAJO");
-       }else{
-           console.log("RIESGO MEDIO");
-       }
-      
-   }else{
-       if(imc<22){
-           console.log("RIESGO MEDIO");
-       }else{
-           console.log("RIESGO ALTO");
-       }
-   }
+      // Identamos el código porque lo hace más legible
 
-   document.write("Tu IMC es de "+imc+" por tanto, ");
+      let edad = parseInt(prompt("Introduce la edad"));
+      let peso = prompt("Introduce el peso");
+      let altura = prompt("Introduce altura en metros");
 
-   if(edad<45){
-       if(imc<22){
-        document.write("RIESGO BAJO");
-       }else{
-        document.write("RIESGO MEDIO");
-       }
-      
-   }else{
-       if(imc<22){
-        document.write("RIESGO MEDIO");
-       }else{
-        document.write("RIESGO ALTO");
-       }
-   }
-    
+      // Se podría poner también como (limitando el número de decimales a 2)
+      // let imc=(peso/Math.pow(altura,2)).toFixed(2);
+      // para limitar el número de decimales y emplear el objeto Math
+      let imc = peso / (altura * altura);
+
+      // Podemos emplear una variable para obtener el resultado y despues emplearla
+      // donde queramos sin necesidad de repetir los condicionales (if)
+
+      /*
+      if (edad < 45) {
+        if (imc < 22) {
+          console.log("RIESGO BAJO");
+        } else {
+          console.log("RIESGO MEDIO");
+        }
+      } else {
+        if (imc < 22) {
+          console.log("RIESGO MEDIO");
+        } else {
+          console.log("RIESGO ALTO");
+        }
+      }
+
+      document.write("Tu IMC es de " + imc + " por tanto, ");
+
+      if (edad < 45) {
+        if (imc < 22) {
+          document.write("RIESGO BAJO");
+        } else {
+          document.write("RIESGO MEDIO");
+        }
+      } else {
+        if (imc < 22) {
+          document.write("RIESGO MEDIO");
+        } else {
+          document.write("RIESGO ALTO");
+        }
+      }*/
+
+      let riesgo;
+      if (edad < 45) {
+        if (imc < 22) 
+           riesgo = "BAJO";
+        else 
+           riesgo = "MEDIO";
+      } else {
+        if (imc < 22) 
+           riesgo = "MEDIO";
+        else 
+           riesgo = "ALTO";
+      }
+
+      // Imprimimos los resultados por consola y en el documento web
+      console.log(`El índice de masa corporal es ${imc}`);
+      console.log(`Tu riesgo de tener una enfermedad cardiovascular es ${riesgo}`);
+      document.write(`Tu IMC es de ${imc}, por tanto, el riesgo de tener una enfermedad cardiovascular es ${riesgo}`);
     </script>
-</body>
+  </body>
 </html>

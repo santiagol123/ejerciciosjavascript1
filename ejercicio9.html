@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script type="text/javascript">
-    let ndia, nmes, nanho, nsuerte;
+      /*
+          En Javascript no es obligatorio declarar las variables previamente,
+          por lo que podemos eliminar esta linea y realizar la declaracion
+          al mismo tiempo que la usamos.
+          Asi eliminamos lineas de codigo y lo hacemos mas claro
+        */
 
-    let nsuerte2=0;
+      // let ndia, nmes, nanho, nsuerte;
 
-    ndia=prompt("Introduce el dia de nacimiento");
+      // Identamos el código porque lo hace más legible
 
-    nmes=prompt("Introduce el mes de nacimiento");
+      // Declaramos la variable donde la necesitamos y con nombre significativo
+      //let nsuerte2=0;
 
-    nanho=prompt("Introduce el año de nacimiento");
+      // Seria conveniente hacer un bucle para leer dia y mes y comprobar
+      // que el mes esta entre 1 y 12 y que dia entre 1 y 31, por lo menos
+      let ndia = prompt("Introduce el dia de nacimiento");
+      let nmes = prompt("Introduce el mes de nacimiento");
+      let nanho = prompt("Introduce el año de nacimiento");
 
-    nsuerte=parseInt(ndia)+parseInt(nmes)+parseInt(nanho);
+      let nsuerte = parseInt(ndia) + parseInt(nmes) + parseInt(nanho);
 
-    console.log(parseInt(nsuerte));
+      console.log(parseInt(nsuerte));
 
-    let numSuerteFinal=0
+      let numSuerteFinal = 0;
+      let numSuerteStr = nsuerte.toString();
+      for (i = 0; i < numSuerteStr.length; i++)
+        numSuerteFinal += parseInt(numSuerteStr[i]);
 
-    let numSuerteStr=nsuerte.toString()
-
-    for (i=0;i<numSuerteStr.length;i++)
-
-    numSuerteFinal+=parseInt(numSuerteStr[i])
-
-    console.log(numSuerteFinal)
-
+      // Resultado significativo
+      //console.log(numSuerteFinal)
+      console.log(
+        `El número de la suerte que corresponde al ${ndia}/${nmes}/${nanho} es ${numSuerteFinal}`
+      );
+      document.write(
+        `El número de la suerte que corresponde al ${ndia}/${nmes}/${nanho} es ${numSuerteFinal}`
+      );
     </script>
-</body>
+  </body>
 </html>

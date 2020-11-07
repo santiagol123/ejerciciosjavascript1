@@ -7,17 +7,30 @@
 </head>
 <body>
    <script type="text/javascript">
-      let cateto1, cateto2,hipotenusa, resultado;
+             /*
+          En Javascript no es obligatorio declarar las variables previamente,
+          por lo que podemos eliminar esta linea y realizar la declaracion
+          al mismo tiempo que la usamos.
+          Asi eliminamos lineas de codigo y lo hacemos mas claro
+        */
 
-      cateto1=parseInt(prompt("valor de cateto 1: "));
-      cateto2=parseInt(prompt("valor de cateto 2: "));
+      //let cateto1, cateto2,hipotenusa, resultado;
 
-      resultado=Math.sqrt((cateto1*cateto1)+(cateto2*cateto2));
+      let cateto1=parseInt(prompt("Valor de cateto 1: "));
+      let cateto2=parseInt(prompt("Valor de cateto 2: "));
 
-      console.log("La hipotenusa del triángulo con catetos ",cateto1,"y",cateto2, "es",resultado);
+      // Nombres significativos en las variables
+      // let hipotenusa=Math.sqrt(Math.pow(cateto1,2)+Math.pow(cateto2,2)).toFixed(2);
+      let hipotenusa=Math.sqrt((cateto1*cateto1)+(cateto2*cateto2)).toFixed(2);
 
-      document.write("La hipotenusa es: "+resultado)
-
+      // Impresion de resultados en consola y en el documento con etiquetes html
+      console.log(`La hipotenusa del triángulo con catetos ${cateto1} y ${cateto2} es ${hipotenusa}`);
+      document.write(`Un triángulo con catetos <br>
+                      <ul>
+                         <li>Cateto1: ${cateto1} 
+                         <li>Cateto2: ${cateto2} 
+                      </ul>
+                      tiene una hipotenusa que mide ${hipotenusa}`)
    </script>
 </body>
 </html>

@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script type="text/javascript">
-    let n, resultado;
-    n=prompt("Introduce un numero entre 1 y 100");
 
-    if(n<1 && n>100){
+      // Identamos el código porque lo hace más legible
+      // y declaramos las variables cuando las necesitemos
+
+      // No tiene sentido lo que haces
+      /*
+         Deberías repetir la lectura del numero mientras no esté entre 1 y 100
+         y no lo estas haciendo con el codigo que pones
+      */
+
+      /*
+         El bucle while tampoco tiene sentido. Estas empleando la variable resultado en la
+         comparacion sin haber sido inicializada. 
+         Esta variable además no la necesitas. En realidad es n
+      */
+
+      /*
+        Tienes que ir mostrando cada valor generado (n), por lo que o lo haces dentro del bucle while
+        o declaras una variable de tipo String que en cada iteración se concatene (una) con el valor 
+        generado
+      */
+
+      let n, resultado;
+
+      n = prompt("Introduce un numero entre 1 y 100");
+      if (n < 1 && n > 100) {
         prompt("error, el número tiene que estar entre 1 y 100");
-    }
-    while(resultado!=1){
-        if(n%2==0){
-         resultado=n/2;
-    }else{
-        resultado=n+3+1;
-    }
-    }
-    console.log(resultado);
+      }
+      while (resultado != 1) {
+        if (n % 2 == 0) {
+          resultado = n / 2;
+        } else {
+          resultado = n + 3 + 1;
+        }
+      }
+      console.log(resultado);
     </script>
-</body>
+  </body>
 </html>

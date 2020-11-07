@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script type="text/javascript">
+      /* 
+           El ejercicio tiene truco. Se trata de convertir los segundos a otras
+           unidades de tiempo, pero entonces ya quedan menos segundos.
+
+           Imaginemos que decimos que estamos en pandemina 64 segundos. El resultado
+           deberia ser:
+
+                  1 minuto 4 segundos
+
+           Sería deseable que si no hay tiempo en alguna de las unidades, no se mostrara
+           esa unidad. Por ejemplo, en el caso de 1 hora+10segundos=3610 segundos debería
+           tener una salida:
+            
+                  1 hora 10 segundos
+
+            sin mostrar 0 minutos
+
+           Reformula el codigo teniendo en cuenta las variables que te defino
+           
+        */
+
+      let segundosMinuto = 60;
+      let segundosHora = 60 * segundosMinuto;
+      let segundosDia = 24 * segundosHora;
+      let segundosSemana = 7 * segundosDia;
+
+      /*
     let segundos, minutos, horas, dias, semanas;
 
     segundos=parseInt(prompt("Introduce el número de segundos"));
@@ -30,9 +57,7 @@
         document.write("NÚMERO DE HORAS ",horas+"<br/>");
         document.write("NÚMERO DE DIAS ",dias+"<br/>");
         document.write("NÚMERO DE SEMANAS ",semanas+"<br/>");
-
-
-
+*/
     </script>
-</body>
+  </body>
 </html>

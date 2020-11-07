@@ -7,18 +7,22 @@
 </head>
 <body>
    <script type="text/javascript">
-       let nombre, edad, resultado2;
+       /*
+          En Javascript no es obligatorio declarar las variables previamente,
+          por lo que podemos eliminar esta linea y realizar la declaracion
+          al mismo tiempo que la usamos.
+          Asi eliminamos lineas de codigo y lo hacemos mas claro
+        */
+       
+       //let nombre, edad, resultado2;
 
-       nombre=prompt("Introduce tu nombre");
-       edad=prompt("Introduce tu edad");
-       resultado2=`Hola ${nombre}, tu edad es  ${edad}`;
+       let nombre=prompt("Introduce tu nombre");
+       let edad=prompt("Introduce tu edad");
+       let resultado=`Hola ${nombre}, tu edad es  ${edad}`;
 
-
-       console.log("nombre: ",nombre);
-       console.log("edad: ",edad);
-
-      
-       document.write(resultado2);
+        // Imprimimos salida por consola y document web
+       console.log(resultado);
+       document.write(resultado);
    </script>
 </body>
 </html>

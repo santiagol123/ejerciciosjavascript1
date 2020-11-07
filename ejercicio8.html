@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script type="text/javascript">
-    let npreguntas, naciertos, nota, ejercicio;
+      /*
+          En Javascript no es obligatorio declarar las variables previamente,
+          por lo que podemos eliminar esta linea y realizar la declaracion
+          al mismo tiempo que la usamos.
+          Asi eliminamos lineas de codigo y lo hacemos mas claro
+        */
 
-    npreguntas=prompt("Introduce el número de preguntas");
-    naciertos=prompt("Introduce el número de aciertos");
+      //let npreguntas, naciertos, nota, ejercicio;
 
-    nota=parseInt(naciertos/npreguntas*100);
+      // Identamos el código porque lo hace más legible
+      
+      let npreguntas = prompt("Introduce el número de preguntas");
+      let naciertos = prompt("Introduce el número de aciertos");
 
-    console.log(nota);
-    document.write(nota+"</br>");
+      /* No se necesitan los parentesis por el orden de ejecucion de las operaciones 
+          let nota = parseInt((naciertos / npreguntas) * 100);
+      */
+      // Documentamos el calculo
+      // Porcentaje de preguntas acertadas
+      let nota = parseInt((naciertos / npreguntas) * 100);
 
-if(nota>=90){
-    console.log("CLASIFICACIÓN A");
-    document.write("CLASIFICACIÓN A");
-}else if(nota>=80){
+      /*
+       */
+
+      /* Todo los siguiente esta bien, pero Es preferible definir una variable que contenga 
+         el resultado, para despues emplearla para imprimir el resultado 
+         */
+      console.log(nota);
+      document.write(nota + "</br>");
+      // Identamos el código porque lo hace más legible
+      if (nota >= 90) {
+        console.log("CLASIFICACIÓN A");
+        document.write("CLASIFICACIÓN A");
+      } else if (nota >= 80) {
         console.log("CLASIFICACIÓN B");
         document.write("CLASIFICACIÓN B");
-    }else if(nota>=70){
-            console.log("CLASIFICACIÓN C");
-            document.write("CLASIFICACIÓN C");
-        }else if(nota>=60){
-                console.log("CLASIFIACIÓN D");
-                document.write("CLASIFICACIÓN D");
-            }else if(nota>=0){
-                    console.log("CLASIFIACIÓN F");
-                    document.write("CLASIFICACIÓN A");
-                }
-        
+      } else if (nota >= 70) {
+        console.log("CLASIFICACIÓN C");
+        document.write("CLASIFICACIÓN C");
+      } else if (nota >= 60) {
+        console.log("CLASIFIACIÓN D");
+        document.write("CLASIFICACIÓN D");
+      } else if (nota >= 0) {
+        console.log("CLASIFIACIÓN F");
+        document.write("CLASIFICACIÓN A");
+      }
+
+      /* Podríamos hacer una salida de informacion como esta (si declaramos la variable resultadoExamen)
+       y la empleamos en los ifs anteriores para darle el valor
+
+        console.log(`El examen se puede clasificar como ${resultadoExamen}`);
+        document.write(`<p>El examen se puede clasificar como ${resultadoExamen}</p>`);
+
+    */
     </script>
-</body>
+  </body>
 </html>

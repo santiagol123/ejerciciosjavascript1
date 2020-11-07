@@ -1,31 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script type="text/javascript">
-     let ndia, nmes, nanho;
+      /*
+          En Javascript no es obligatorio declarar las variables previamente,
+          por lo que podemos eliminar esta linea y realizar la declaracion
+          al mismo tiempo que la usamos.
+          Asi eliminamos lineas de codigo y lo hacemos mas claro
+        */
 
-ndia=prompt("Introduce el dia de nacimiento");
+      // let ndia, nmes, nanho;
 
-nmes=prompt("Introduce el mes de nacimiento");
+      // Identamos el código porque lo hace más legible  
 
-nanho=prompt("Introduce el año de nacimiento");
+      // Empezamos pidiendo el año, pero deberiamos convertirlo en entero con parseInt
+      let nanho = prompt("Introduce el año de nacimiento");
+      // Seguimos con el mes
+      // No deberíamos seguir mientras mes no estuviera entre 1 y 12, pero deberiamos
+      // convertirlo en entero con parseInt
+      let nmes = prompt("Introduce el mes de nacimiento");
+      /*
+          Ahora tendríamos que repetir la peticion del dia si el dia
+          es mayor de 30 en los meses de 30 dias, mayor de 31 en los meses de
+          31 dias, mayor de 28 en los años no bisiestos y mayor de 29 en los 
+          años bisiestos.
+          Para ello sería recomentable declarar una variable que tomara el valor de 
+          true si el año es bisiesto y false si no lo es.
 
-if((nanho%100!=0 && nanho%4==0) || (nanho%100==0 && nanho%400==0) && (ndia==29) && (nmes==2)){
-    console.log("La fecha es correcta");
-}else{
-    console.log("Fecha incorrecta");
-}
+          REFORMULA EL CODIGO
+      */
 
-if((nanho%100!=0 && nanho%4==0) || (nanho%100==0 && nanho%400==0) && (ndia==29) && (nmes==2)){
-    document.write("La fecha es correcta");
-}else{
-    document.write("Fecha incorrecta");
-}
+      //let ndia = prompt("Introduce el dia de nacimiento");
+      
+      /*
+      if (
+        (nanho % 100 != 0 && nanho % 4 == 0) ||
+        (nanho % 100 == 0 && nanho % 400 == 0 && ndia == 29 && nmes == 2)
+      ) {
+        console.log("La fecha es correcta");
+      } else {
+        console.log("Fecha incorrecta");
+      }
+
+      if (
+        (nanho % 100 != 0 && nanho % 4 == 0) ||
+        (nanho % 100 == 0 && nanho % 400 == 0 && ndia == 29 && nmes == 2)
+      ) {
+        document.write("La fecha es correcta");
+      } else {
+        document.write("Fecha incorrecta");
+      }
+      */
     </script>
-</body>
+  </body>
 </html>
